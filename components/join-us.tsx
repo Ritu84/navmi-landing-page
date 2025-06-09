@@ -4,7 +4,7 @@ import { Mail, Users, Code, Server, Rocket, CircleCheck } from "lucide-react";
 
 export default function JoinUs() {
   return (
-    <section id="join-us" className="bg-muted dark:bg-background py-25 md:py-34 ">
+    <section id="join-us" className="bg-muted dark:bg-background py-32 md:py-42 ">
 
       <div className="mx-auto max-w-7xl px-4 md:px-6">
         <div className="grid md:grid-cols-2 gap-12 items-start">

@@ -14,24 +14,22 @@ export default function HeroSection() {
             <main className="overflow-x-hidden ">
 
                 <section className="relative h-screen w-full overflow-hidden">
+                    {/* Background Image */}
                     <div className="absolute inset-0 -z-10">
                         <img
                             className="w-full h-full object-cover object-center"
                             src="/hero.jpg"
                             alt="Hero background image"
                         />
+                        {/* Overlay */}
+                        <div className="absolute inset-0 bg-black/50 " />
                     </div>
 
+                    {/* Text Content */}
                     <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-4">
-                        <TextEffect
-                            as="h1"
-                            per="char"
-                            preset="fade"
-                            className="typewriter-text text-white text-5xl md:text-6xl xl:text-[80px] font-bold"
-                        >
+                        <h1 className="text-white text-5xl md:text-6xl xl:text-[80px] font-bold">
                             Born to Beat the Market.
-                        </TextEffect>
-
+                        </h1>
 
                         <TextEffect
                             as="p"
@@ -55,6 +53,7 @@ export default function HeroSection() {
                         </div>
                     </div>
                 </section>
+
 
             </main>
         </>

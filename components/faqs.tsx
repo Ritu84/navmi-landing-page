@@ -15,35 +15,41 @@ export default function FAQsThree() {
     const faqItems: FAQItem[] = [
         {
             id: 'item-1',
-            icon: 'clock',
+            icon: 'brain', // Represents intelligence/strategy
             question: 'What exactly does Navmi Partners do?',
-            answer: 'We are a proprietary trading firm that uses a combination of machine learning, quantitative analysis, and traditional trading strategies to generate alpha. We trade our own capital with code, data, and discipline.',
+            answer:
+                'We are a proprietary trading firm that uses a combination of machine learning, quantitative analysis, and traditional trading strategies to generate alpha. We trade our own capital with code, data, and discipline.',
         },
         {
             id: 'item-2',
-            icon: 'credit-card',
+            icon: 'zap', // Represents speed and innovation
             question: 'What makes us different from other quant firms?',
-            answer: 'We don’t manage money for others. We don’t chase headlines. We focus on deep research, smart infrastructure, and executing ideas fast. Our edge comes from speed, clarity, and conviction—not bureaucracy.',
+            answer:
+                'We don’t manage money for others. We don’t chase headlines. We focus on deep research, smart infrastructure, and executing ideas fast. Our edge comes from speed, clarity, and conviction—not bureaucracy.',
         },
         {
             id: 'item-3',
-            icon: 'truck',
-            question: ' Are you hiring? What roles are open?',
-            answer: 'Yes—we are looking for curious minds who love building: Quant Interns, Systems Developers, and Jr. Systems Developers.',
+            icon: 'briefcase', // Job roles
+            question: 'Are you hiring? What roles are open?',
+            answer:
+                'Yes—we are looking for curious minds who love building: Quant Interns, Systems Developers, and Jr. Systems Developers.',
         },
         {
             id: 'item-4',
-            icon: 'globe',
+            icon: 'mail', // Refers to email-based application
             question: 'What’s the application process like?',
-            answer: 'Minimal fluff. Email us at navmipartners@gmail.com with: What you have built or researched and GitHub, resume, or anything that shows you are serious.',
+            answer:
+                'Minimal fluff. Email us at navmipartners@gmail.com with: What you have built or researched and GitHub, resume, or anything that shows you are serious.',
         },
         {
             id: 'item-5',
-            icon: 'package',
+            icon: 'lightbulb', // Ideas and collaboration
             question: 'Can I pitch a collaboration or idea?',
-            answer: 'Yes, but keep it brief and thoughtful. We are open to sharp edges, not vague decks. Reach us at navmipartners@gmail.com.',
+            answer:
+                'Yes, but keep it brief and thoughtful. We are open to sharp edges, not vague decks. Reach us at navmipartners@gmail.com.',
         },
     ]
+    
 
     return (
         <section className=" dark:bg-background py-25 md:py-34">

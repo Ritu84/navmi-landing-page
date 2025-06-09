@@ -8,40 +8,47 @@ export default function ContentSection() {
                 <h2 className="relative z-10 max-w-xl text-4xl font-medium lg:text-5xl">Why We Exist ? </h2>
                 <div className="grid gap-6 sm:grid-cols-2 md:gap-12 lg:gap-24">
                     <div className="relative space-y-2">
-                        <p className="text-muted-foreground">
+                        <p className="text-muted-foreground text-lg">
                             Because Most Trading Firms Are Either Too Big to Pivot, or Too Lazy to Think.<br /> We founded this company because we believe that <span className="text-[#4A6CF7] font-bold">speed, simplicity, and intelligent</span> programming can still outperform bureaucracy, overfitting, and jargon.
                         </p>
-                        <p className="text-muted-foreground">Our goal is to:</p>
+                        <p className="text-muted-foreground text-lg">Our goal is to:</p>
 
-                        <div className="space-y-6 pt-6">
+                        <div className="space-y-6 pt-6  ">
                             <div className="flex items-start gap-4">
                                 <CircleCheck className="size-5 text-green-500" />
-                                <div>
-                                    <h3 className="text-base font-medium">Simple Explanations</h3>
-                                    <p className="text-muted-foreground text-sm">Get jargon-free explanations of what your test results actually mean for your health.</p>
+                                <div className="mt-[-6px]">
+                                    <h3 className="text-base font-medium text-lg">Explore</h3>
+                                    <p className="text-muted-foreground text-md">Discover unconventional possibilities</p>
                                 </div>
                             </div>
                             <div className="flex items-start gap-4">
                                 <CircleCheck className="size-5 text-green-500" />
-                                <div>
-                                    <h3 className="text-base font-medium">Highlighted Anomalies</h3>
-                                    <p className="text-muted-foreground text-sm">Instantly see which values are outside normal ranges and what they could indicate.</p>
+                                <div className="mt-[-6px]">
+                                    <h3 className="text-base font-medium text-lg">Validate</h3>
+                                    <p className="text-muted-foreground text-md">Scale only when proven.</p>
                                 </div>
                             </div>
                             <div className="flex items-start gap-4">
                                 <CircleCheck className="size-5 text-green-500" />
-                                <div>
-                                    <h3 className="text-base font-medium">Personalized Recommendations</h3>
-                                    <p className="text-muted-foreground text-sm">Receive tailored health advice based on your specific lab results and medical history.</p>
+                                <div className="mt-[-6px]">
+                                    <h3 className="text-base font-medium text-lg">Focus</h3>
+                                    <p className="text-muted-foreground text-md">Stay small, smart, and hungry.</p>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div className="relative mt-6 sm:mt-0">
-                        <div className="bg-linear-to-b aspect-67/34 relative rounded-2xl from-zinc-300 to-transparent p-px dark:from-zinc-700">
-                            
+                    <div className="relative mt-6 sm:mt-0 flex justify-center">
+                        <div className="relative w-full max-w-[800px] bg-gradient-to-b from-zinc-300 to-white dark:from-zinc-700 rounded-2xl p-px pb-12"> {/* Extend gradient */}
+                            <Image
+                                src="/exist.png"
+                                alt="Pricing illustration"
+                                width={800}
+                                height={400}
+                                className="rounded-2xl object-contain w-full h-full"
+                            />
                         </div>
                     </div>
+
                 </div>
             </div>
         </section>

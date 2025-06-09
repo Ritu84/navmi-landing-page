@@ -2,12 +2,13 @@
 
 import { Card, CardContent, CardHeader } from '@/components/ui/card'
 import { Settings2, Sparkles, Zap, Wallet } from 'lucide-react'
-import { ReactNode } from 'react'
+import { ReactNode, useRef } from 'react'
 import { motion } from 'framer-motion'
 
 export default function Features() {
+    const buildingRef = useRef<HTMLElement>(null)
     return (
-        <section className="bg-white py-25 md:py-34">
+        <section id="building-section" ref={buildingRef} className="bg-white py-25 md:py-34">
             <div className="@container mx-auto max-w-5xl px-6">
                 <motion.div 
                     initial={{ opacity: 0, y: 20 }}
