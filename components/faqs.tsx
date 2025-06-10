@@ -52,13 +52,13 @@ export default function FAQsThree() {
     
 
     return (
-        <section className=" dark:bg-background py-25 md:py-34">
-            <div className="mx-auto max-w-5xl md:px-6">
-                <div className="flex flex-col gap-100 md:flex-row md:gap-16">
-                    <div className="md:w-1/3">
+        <section className="dark:bg-background py-12 md:py-25 lg:py-34">
+            <div className="mx-auto max-w-5xl px-4 sm:px-6">
+                <div className="flex flex-col gap-8 md:flex-row md:gap-16">
+                    <div className="md:w-1/3 mb-8 md:mb-0">
                         <div className="sticky top-20">
-                            <h2 className="mt-4 text-[40px] font-bold">Frequently Asked Questions</h2>
-                            <p className="text-muted-foreground mt-4">
+                            <h2 className="mt-2 text-2xl sm:text-3xl md:text-[40px] font-bold">Frequently Asked Questions</h2>
+                            <p className="text-muted-foreground mt-2 sm:mt-4 text-sm sm:text-base">
                                 Any queries? Reach out to us at{' '}
                                 <Link
                                     href="mailto:navmipartners@gmail.com"
@@ -72,26 +72,26 @@ export default function FAQsThree() {
                         <Accordion
                             type="single"
                             collapsible
-                            className="w-full space-y-2">
+                            className="w-full space-y-3 sm:space-y-2">
                             {faqItems.map((item) => (
                                 <AccordionItem
                                     key={item.id}
                                     value={item.id}
-                                    className="bg-background shadow-xs rounded-lg border px-4 last:border-b">
-                                    <AccordionTrigger className="cursor-pointer items-center py-5 hover:no-underline">
-                                        <div className="flex items-center gap-3">
+                                    className="bg-background shadow-xs rounded-lg border px-2 sm:px-4 last:border-b">
+                                    <AccordionTrigger className="cursor-pointer items-center py-4 sm:py-5 hover:no-underline">
+                                        <div className="flex items-center gap-2 sm:gap-3">
                                             <div className="flex size-6">
                                                 <DynamicIcon
                                                     name={item.icon}
                                                     className="m-auto size-4"
                                                 />
                                             </div>
-                                            <span className="text-base">{item.question}</span>
+                                            <span className="text-base text-left">{item.question}</span>
                                         </div>
                                     </AccordionTrigger>
-                                    <AccordionContent className="pb-5">
-                                        <div className="px-9">
-                                            <p className="text-base">{item.answer}</p>
+                                    <AccordionContent className="pb-4 sm:pb-5">
+                                        <div className="px-2 sm:px-9">
+                                            <p className="text-base text-left">{item.answer}</p>
                                         </div>
                                     </AccordionContent>
                                 </AccordionItem>

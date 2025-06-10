@@ -37,7 +37,7 @@ export default function ContentSection() {
                             </div>
                         </div>
                     </div>
-                    <div className="relative mt-6 sm:mt-0 flex justify-center">
+                    <div className="relative mt-6 sm:mt-0 flex justify-center hidden sm:block  ">
                         <div className="relative w-full max-w-[800px] bg-gradient-to-b from-zinc-300 to-white dark:from-zinc-700 rounded-2xl p-px pb-12"> {/* Extend gradient */}
                             <Image
                                 src="/exist.png"

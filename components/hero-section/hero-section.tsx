@@ -2,8 +2,6 @@ import React from 'react'
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
 import { HeroHeader } from "@/components/hero-section/hero5-headers"
-import { InfiniteSlider } from '@/components/motion-primitives/infinite-slider'
-import { ProgressiveBlur } from '@/components/motion-primitives/progressive-blur'
 import { ChevronRight } from 'lucide-react'
 import { TextEffect } from './text-effect'
 

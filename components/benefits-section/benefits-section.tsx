@@ -25,7 +25,7 @@ export default function Features() {
                     </p>
                 </motion.div>
 
-                <div className="@min-4xl:max-w-full @min-4xl:grid-cols-4 mx-auto mt-8 grid max-w-[1400px] gap-8 *:text-center md:mt-16">
+                <div className="@min-4xl:max-w-full @min-4xl:grid-cols-4 mx-auto mt-8 grid max-w-[1400px] gap-8 *:text-center md:mt-16 md:grid-cols-2">
                     {/* Card 1 */}
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}

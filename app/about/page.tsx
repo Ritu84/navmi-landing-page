@@ -6,9 +6,10 @@ import Pricing from '@/components/pricing';
 const AboutPage = () => {
   return (
     <div>
-    <div className="min-h-screen flex flex-col bg-muted dark:bg-background ">
       <HeroHeader />
-      <main className="flex-1 flex flex-col dark:bg-transparent items-center justify-center px-4 py-12">
+    <div className="min-h-screen flex flex-col bg-muted dark:bg-background ">
+      
+      <main className="flex-1 flex flex-col dark:bg-transparent items-center justify-center px-4 py-30">
         <h1 className="text-3xl md:text-4xl font-bold text-center mb-4   ">About <span className='bg-gradient-to-r from-[#4A6CF7] to-[#7D5EFF] bg-clip-text text-transparent'>Navmi Partners</span> </h1>
         <p className="text-[18px] text-center max-w-2xl mb-10">
           We are a small team of traders and engineers developing a unique trading engine from the ground up. No asset management. No advisory. Deep research, intelligent infrastructure, and our own money on the line. We aren't optimizing for press. We are optimizing for edge.

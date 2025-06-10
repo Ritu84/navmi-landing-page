@@ -4,12 +4,12 @@ import { Mail, Users, Code, Server, Rocket, CircleCheck } from "lucide-react";
 
 export default function JoinUs() {
   return (
-    <section id="join-us" className="bg-muted dark:bg-background py-32 md:py-42 ">
+    <section id="join-us" className="bg-muted dark:bg-background py-30 md:py-40 ">
 
       <div className="mx-auto max-w-7xl px-4 md:px-6">
-        <div className="grid md:grid-cols-2 gap-12 items-start">
+        <div className="flex flex-col-reverse md:grid md:grid-cols-2 gap-12 items-start">
           {/* First Column - Cards */}
-          <div className="flex flex-col gap-6">
+          <div className="flex flex-col gap-6 w-full max-w-sm mx-auto">
             <Card className="shadow-zinc-950/5 w-full hover:scale-[1.03] hover:shadow-lg transition duration-300 ease-in-out">
               <CardHeader className="items-center">
                 <Rocket className="size-7 text-zinc-900 mb-2" />
@@ -74,7 +74,7 @@ export default function JoinUs() {
               </ul>
             </div>
 
-            <div className="mt-8">
+            <div className="mt-6 max-w-sm mx-auto md:mx-0 flex justify-center">
               <Button
                 asChild
                 variant="outline"

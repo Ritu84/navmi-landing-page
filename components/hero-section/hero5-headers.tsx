@@ -1,21 +1,21 @@
 'use client'
 import Link from 'next/link'
-import { Menu, X } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import React, { useEffect, useState } from 'react'
 import { cn } from '@/lib/utils'
-import { usePathname } from 'next/navigation' // ✅ import this
+import { usePathname } from 'next/navigation' 
 
 const menuItems = [
     { name: 'About ', href: '/about' },
-    { name: 'Careers', href: '#join-us' },
     { name: 'Contact Us', href: 'https://docs.google.com/forms/d/e/1FAIpQLSfP08AmskLj8a9ubHiInL2nZzbGxg1QtBGgWdcoE1WoDWsCzA/viewform?usp=dialog' },
+    { name: 'Careers', href: '#join-us' },
+    
 ]
 
 export const HeroHeader = () => {
-    const [menuState, setMenuState] = useState(false)
     const [isScrolledToBuilding, setIsScrolledToBuilding] = useState(false)
-    const pathname = usePathname() // ✅ get current path
+    const [isMenuOpen, setIsMenuOpen] = useState(false)
+    const pathname = usePathname() 
 
     useEffect(() => {
         const handleScroll = () => {
@@ -46,13 +46,23 @@ export const HeroHeader = () => {
                                 Navmi Partners
                             </span>
                         </Link>
-                        <ul className="flex gap-8 text-sm">
+                        <div className="md:hidden flex items-center">
+                            <button onClick={() => setIsMenuOpen(!isMenuOpen)} className={cn(pathname === '/about' || isDark ? 'text-black' : 'text-white', 'focus:outline-none')}>
+                                <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                                </svg>
+                            </button>
+                        </div>
+                        <ul className="hidden md:flex gap-6 text-sm">
                             {menuItems.map((item, index) => (
                                 <li key={index}>
                                     {item.name.trim() === 'Careers' ? (
                                         <Link href={item.href}>
                                             <Button
-                                                className="bg-[#10B981] hover:bg-[#10B970] text-white text-[18px] px-6 py-2 rounded-lg font-medium cursor-pointer"
+                                                className={cn(
+                                                    "bg-[#10B981] hover:bg-[#10B970] text-white text-[18px] px-6 py-2 rounded-lg font-medium cursor-pointer",
+                                                    pathname === '/about' ? "hidden" : "visible"
+                                                )}
                                             >
                                                 {item.name}
                                             </Button>
@@ -76,6 +86,49 @@ export const HeroHeader = () => {
                     </div>
                 </div>
             </nav>
+            {/* Mobile menu overlay */}
+            <div className={cn(
+                "md:hidden fixed top-0 left-0 w-full h-full bg-background/40 backdrop-blur-sm transform transition-transform duration-300 ease-in-out",
+                isMenuOpen ? "translate-x-0" : "-translate-x-full"
+            )}>
+                <div className="flex justify-end p-4">
+                    <button onClick={() => setIsMenuOpen(false)} className="text-black focus:outline-none">
+                        <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12"></path>
+                        </svg>
+                    </button>
+                </div>
+                <ul className="flex flex-col items-center gap-6 text-xl mt-8 text-black">
+                    {menuItems.map((item, index) => (
+                        <li key={index} onClick={() => setIsMenuOpen(false)}>
+                            {item.name.trim() === 'Careers' ? (
+                                <Link href={item.href}>
+                                    <Button
+                                        className={cn(
+                                            "bg-[#10B981] hover:bg-[#10B970] text-white text-[18px] px-6 py-2 rounded-lg font-medium cursor-pointer",
+                                            pathname === '/about' ? "hidden" : "visible"
+                                        )}
+                                    >
+                                        {item.name}
+                                    </Button>
+                                </Link>
+                            ) : (
+                                <Link
+                                    href={item.href}
+                                    className={cn(
+                                        "px-4 py-2 text-[20px] font-medium transition-colors",
+                                        isDark ? "text-black hover:text-[#1E40AF]" : "text-white hover:text-[#1E40AF]"
+                                    )}
+                                    target={item.name.trim() === 'Contact Us' ? "_blank" : undefined}
+                                    rel={item.name.trim() === 'Contact Us' ? "noopener noreferrer" : undefined}
+                                >
+                                    <span>{item.name}</span>
+                                </Link>
+                            )}
+                        </li>
+                    ))}
+                </ul>
+            </div>
         </header>
     )
 }
